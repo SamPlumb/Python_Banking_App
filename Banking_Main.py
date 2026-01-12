@@ -2,6 +2,7 @@
 
 # Imports
 import json
+import CBbox
 
 
 class Transaction():
@@ -45,8 +46,6 @@ class BankingApp():
 
     # Display Transactions
     def display_transactions(self):
-
-        transaction_num = id(self.cust_wallet) + 1
 
         if not self.cust_wallet:
 
@@ -107,34 +106,15 @@ bank_menu = [" --- Banking Application Menu ---",
              "6. Load Transactions",
              "7. Exit"]
 
-# Menu Formatting Class
-
-
-class MenuFormat():
-
-    def box_menu(self, menu):
-
-        longest_item = max(menu, key=len)
-
-        box_width = len(longest_item) + 4  # Adding padding
-
-        print(f"╔{'═' * box_width}╗")
-
-        for item in menu:
-
-            print(f"║ {item.ljust(box_width - 2)} ║")
-
-        print(f"╚{'═' * box_width}╝")
-
-
+# Main Function
 def main():
 
     account = BankingApp()
-    menu_formatter = MenuFormat()
+
 
     while True:
 
-        menu_formatter.box_menu(bank_menu)
+        CBbox.d_box(bank_menu)
 
         choice = input("Enter your choice (1-7): ")
 
@@ -166,8 +146,8 @@ def main():
         elif choice == "3":
             print("Transactions:")
 
-            menu_formatter.box_menu(
-                ["--- Transactions List ---"] + account.display_transactions().split("\n"))
+            CBbox.d_box(["--- Transactions List ---"] +
+                        account.display_transactions().split("\n"))
 
         elif choice == "4":
             query = str(input("Enter search query: "))
