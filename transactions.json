@@ -1,0 +1,62 @@
+[
+    {
+        "Transaction": "Rent",
+        "Amount": 1000.0,
+        "Type": "Credit",
+        "Note": "Monthly apartment rent"
+    },
+    {
+        "Transaction": "Electricity Bill",
+        "Amount": 145.75,
+        "Type": "Debit",
+        "Note": "Monthly electricity usage"
+    },
+    {
+        "Transaction": "Groceries",
+        "Amount": 220.4,
+        "Type": "Debit",
+        "Note": "Weekly supermarket shopping"
+    },
+    {
+        "Transaction": "Salary",
+        "Amount": 2800.0,
+        "Type": "Credit",
+        "Note": "Monthly salary payment"
+    },
+    {
+        "Transaction": "Internet",
+        "Amount": 55.99,
+        "Type": "Debit",
+        "Note": "Home broadband subscription"
+    },
+    {
+        "Transaction": "Water Bill",
+        "Amount": 68.3,
+        "Type": "Debit",
+        "Note": "Quarterly water charges"
+    },
+    {
+        "Transaction": "Mobile Phone",
+        "Amount": 42.0,
+        "Type": "Debit",
+        "Note": "Monthly mobile phone plan"
+    },
+    {
+        "Transaction": "Fuel",
+        "Amount": 95.2,
+        "Type": "Debit",
+        "Note": "Petrol for car"
+    },
+    {
+        "Transaction": "Insurance Refund",
+        "Amount": 120.0,
+        "Type": "Credit",
+        "Note": "Overpayment refund from insurer"
+    },
+    {
+        "Transaction": "Streaming Subscription",
+        "Amount": 12.99,
+        "Type": "Debit",
+        "Note": "Monthly video streaming service"
+    }
+]
