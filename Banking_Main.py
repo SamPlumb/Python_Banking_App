@@ -96,29 +96,33 @@ class BankingApp():
             print("An error occurred while loading transactions.")
 
 
-bank_menu = [" --- Banking Application Menu ---",
-             "                                 ",
-             "1. Add Transaction",
-             "2. Remove Transaction",
-             "3. Display Transactions",
-             "4. Search Transaction",
-             "5. Save Transactions",
-             "6. Load Transactions",
-             "7. Exit"]
-
 # Main Function
 def main():
 
     account = BankingApp()
 
+    bank_menu = [" --- Banking Application Menu ---",
+                 "                                 ",
+                 "1. Add Transaction",
+                 "2. Remove Transaction",
+                 "3. Display Transactions",
+                 "4. Search Transaction",
+                 "5. Save Transactions",
+                 "6. Load Transactions",
+                 "7. Exit"]
+    
 
     while True:
 
+        # Display Menu
         CBbox.d_box(bank_menu)
 
         choice = input("Enter your choice (1-7): ")
 
-        if choice == "1":
+        # Handle User Choices
+
+        if choice == "1": # Add Transaction
+            
             title = str(input("Enter transaction title: "))
             amount = float(input("Enter amount: "))
             type = str(input("Enter transaction type 1. Credit  2. Debit): "))
@@ -139,34 +143,34 @@ def main():
 
             print("Transaction added successfully.")
 
-        elif choice == "2":
+        elif choice == "2": # Remove Transaction
             title = str(input("Enter transaction title to remove: "))
             print(account.remove_transaction(title))
 
-        elif choice == "3":
+        elif choice == "3": # Display Transactions
             print("Transactions:")
 
             CBbox.d_box(["--- Transactions List ---"] +
                         account.display_transactions().split("\n"))
 
-        elif choice == "4":
+        elif choice == "4": # Search Transaction
             query = str(input("Enter search query: "))
             print("Search Results:")
             print(account.search_transaction(query))
 
-        elif choice == "5":
+        elif choice == "5": # Save Transactions
             account.save_transactions()
             print("Transactions saved successfully.")
 
-        elif choice == "6":
+        elif choice == "6": # Load Transactions
             account.load_transactions()
             print("Transactions loaded successfully.")
 
-        elif choice == "7":
+        elif choice == "7": # Exit
             print("Exiting the application. Goodbye!")
             break
 
-        else:
+        else: # Invalid Choice
             print("Invalid choice. Please try again.")
 
 
