@@ -2,7 +2,7 @@
 
 ### My Goal -
 
-This project aimed to practice Python object-oriented programming by using custom modules and saving data to a file in a practical application. This banking application enables users to record transactions and save them to a JSON file that can be loaded at any time. 
+This project aimed to practice Python object-oriented programming by using custom modules and saving data to a file in a practical application. This banking application lets users record transactions and save them to a JSON file, which can be loaded at any time. 
 
 <p align="center">
 <img width="244" height="177" alt="Image" src="https://github.com/user-attachments/assets/3f602ca5-4ab0-4821-a3f4-9a4205457fb1" />
